@@ -1,0 +1,14 @@
+<h1>Linky</h1>
+
+<% @dictionary.each do |key, entries| %>
+  <a href="#<%= key %>">#<%= key %></a>
+<% end %>
+
+<% @dictionary.each do |key, entries| %>
+  <h2 id="<%= key %>">#<%= key %></h2>
+  <ul>
+    <% entries.each do |entry| %>
+      <li><%= entry %></li>
+    <% end %>
+  </ul>
+<% end %>
